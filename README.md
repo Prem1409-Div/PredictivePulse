@@ -18,6 +18,40 @@ Screenshot of the model:
 - **Sample Data**: Download a sample CSV to understand the required format.
 - **Clean Black & White Table**: Minimalistic and professional data preview.
 
+Flow of the Machine Learning App 🚀
+📂 1. User Uploads CSV (Streamlit, Pandas)
+
+Supports up to 200MB
+Displays data preview using st.dataframe()
+⚙️ 2. Data Preprocessing (Pandas, NumPy, Scikit-learn)
+
+Handles missing values (fill with mean)
+Encodes categorical columns (LabelEncoder)
+🛠 3. Model Configuration (Scikit-learn, Streamlit Widgets)
+
+User selects target column (st.selectbox())
+Chooses train-test split ratio (st.slider())
+🤖 4. Model Training (Scikit-learn, RandomForestRegressor)
+
+Splits data into training & testing sets (train_test_split())
+Trains Random Forest model (RandomForestRegressor())
+📊 5. Model Evaluation (Scikit-learn, Streamlit Metrics)
+
+Calculates R² Score & Mean Squared Error (r2_score(), mean_squared_error())
+Displays performance metrics using st.metric()
+📡 6. Make Predictions (Scikit-learn, Pandas, Streamlit Inputs)
+
+User inputs new data (st.number_input(), st.selectbox())
+Model predicts target value (model.predict())
+Displays prediction in styled output (st.markdown())
+🎨 7. User Interface & Styling (Streamlit, HTML, CSS)
+
+Custom button styles, colors, layout using st.markdown()
+Table styling for data display
+📥 8. Sample Data Download (Pandas, Streamlit Download Button)
+
+User can download example CSV (st.download_button())
+
 ## Requirements 📦
 - Python 3.8+
 - Streamlit
