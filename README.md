@@ -30,3 +30,9 @@ Screenshot of the model:
    ```bash
    git clone https://github.com/yourusername/your-repo.git
    cd your-repo
+
+##Install the required dependencies:
+
+bash
+Copy
+pip install -r requirements.txt   
